@@ -1,0 +1,17 @@
+.message-desk-wrapper {
+  width: 100%;
+}
+
+.message-desk{
+  height: 644px;
+  overflow: hidden;
+}
+
+.message-item {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.incoming-message-position {
+  justify-content: flex-start;
+}

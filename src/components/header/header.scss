@@ -1,0 +1,19 @@
+.chat-header {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #FFFFFF;
+  box-shadow: inset 0px -1px 0px rgba(32, 31, 30, 0.12);
+}
+
+.chat-header-text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  margin-left: 10px;
+}
+
+.chat-header-icon {
+  margin-left: 18px;
+}

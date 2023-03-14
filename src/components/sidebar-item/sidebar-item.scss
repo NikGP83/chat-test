@@ -1,0 +1,11 @@
+.sidebar-item {
+    display: flex;
+}
+
+.cut-text { 
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 264px; 
+    height: 1.2em; 
+    white-space: nowrap;
+  }

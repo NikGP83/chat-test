@@ -1,7 +1,10 @@
+import { useGetChatDataQuery } from '../../api/chat/chat-serivces';
 import Header from '../header/header';
 import Message from '../message/message';
 import PostForm from '../post-form/post-form';
 import './message-desk.scss';
+
+
 
 const mockData = [
   {
@@ -14,79 +17,11 @@ const mockData = [
     my: true,
     main: true,
   },
-  {
-    id: '12',
-    message: 'some text from some men',
-    created_at: '21:31',
-    name: 'Liam',
-    surname: 'Russel',
-    avatar: '',
-    my: false,
-    main: false,
-  },
-  {
-    id: '1',
-    message: 'blah blah blah blah blah blah',
-    created_at: '21:21',
-    name: 'Diane',
-    surname: 'Russel',
-    avatar: '',
-    my: true,
-    main: true,
-  },
-  {
-    id: '12',
-    message: 'some text from some men',
-    created_at: '21:31',
-    name: 'Liam',
-    surname: 'Russel',
-    avatar: '',
-    my: false,
-    main: false,
-  },
-  {
-    id: '1',
-    message: 'blah blah blah blah blah blah',
-    created_at: '21:21',
-    name: 'Diane',
-    surname: 'Russel',
-    avatar: '',
-    my: true,
-    main: true,
-  },
-  {
-    id: '12',
-    message: 'some text from some men',
-    created_at: '21:31',
-    name: 'Liam',
-    surname: 'Russel',
-    avatar: '',
-    my: false,
-    main: false,
-  },
-  {
-    id: '1',
-    message: 'blah blah blah blah blah blah',
-    created_at: '21:21',
-    name: 'Diane',
-    surname: 'Russel',
-    avatar: '',
-    my: true,
-    main: true,
-  },
-  {
-    id: '12',
-    message: 'some text from some men',
-    created_at: '21:31',
-    name: 'Liam',
-    surname: 'Russel',
-    avatar: '',
-    my: false,
-    main: false,
-  },
 ];
 
 function MessageDesk() {
+  const chatMessagesArr  = useGetChatDataQuery('/chat.get');
+  console.log(chatMessagesArr.data)
   return (
     <>
       <div className='message-desk-wrapper'>

@@ -37,10 +37,13 @@ export const chatApi = createApi({
         baseUrl: 'https://api.lenzaos.com/test',
     }),
     endpoints: (build) => ({
+        getSidebarDialogMsgData: build.query({
+            query: (url) => ({url: url, method: 'get'}),
+        }),
         getChatData: build.query({
             query: (url) => ({url: url, method: 'get'}),
         })
     })
 })
 
-export const {useGetChatDataQuery} = chatApi;
+export const {useGetChatDataQuery, useGetSidebarDialogMsgDataQuery} = chatApi;

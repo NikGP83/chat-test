@@ -27,19 +27,6 @@
       "is_new": true
     },
     {
-      "id": "f5b2ba58-4721-471e-8a9a-4725ed2d1e83",
-      "created_at": 1650381840,
-      "user": {
-        "id": "be215077-594e-4256-82e8-906625c69629",
-        "name": "Clout",
-        "surname": "Profi",
-        "avatar": "https://avatars.lenzaos.com/O7bEEfltwNia.png",
-        "you": true
-      },
-      "message": "Друзья, всем привет! Откликнитесь, пжта, если у кого-то уже есть открытая компания с лицензией General Trading",
-      "is_new": false
-    },
-    {
       "id": "e5ce7ef4-67ca-4538-add8-fefd46b06326",
       "created_at": 1650381060,
       "user": {
@@ -50,19 +37,6 @@
         "you": false
       },
       "message": "Ищу для работы в Дубай инженера - агронома , вдруг есть кандидаты \nСпасибо",
-      "is_new": false
-    },
-    {
-      "id": "c104bb72-34b5-48ba-9ad8-8307c405587d",
-      "created_at": 1650378600,
-      "user": {
-        "id": "be215077-594e-4256-82e8-906625c69629",
-        "name": "Clout",
-        "surname": "Profi",
-        "avatar": "https://avatars.lenzaos.com/O7bEEfltwNia.png",
-        "you": true
-      },
-      "message": "Главный вопрос- зачем он нужен. Жить , приезжать или работать ( разрешение)",
       "is_new": false
     },
     {
@@ -115,19 +89,6 @@
         "you": false
       },
       "message": "Девушки кто это здесь уже давно - поделитесь какие салоны тут хорошие. Парикмахер/маникюр/педикюр \nМерси",
-      "is_new": false
-    },
-    {
-      "id": "5a5632af-571e-4214-96b6-cf21585f9801",
-      "created_at": 1650369540,
-      "user": {
-        "id": "be215077-594e-4256-82e8-906625c69629",
-        "name": "Clout",
-        "surname": "Profi",
-        "avatar": "https://avatars.lenzaos.com/O7bEEfltwNia.png",
-        "you": true
-      },
-      "message": "Это теперь спорт такой - как оплатить нетфликс, гугл, букинг и прочее",
       "is_new": false
     },
     {
@@ -198,19 +159,6 @@
           "is_new": true
         },
         {
-          "id": "f5b2ba58-4721-471e-8a9a-4725ed2d1e83",
-          "created_at": 1650381840,
-          "user": {
-            "id": "be215077-594e-4256-82e8-906625c69629",
-            "name": "Clout",
-            "surname": "Profi",
-            "avatar": "https://avatars.lenzaos.com/O7bEEfltwNia.png",
-            "you": true
-          },
-          "message": "Друзья, всем привет! Откликнитесь, пжта, если у кого-то уже есть открытая компания с лицензией General Trading",
-          "is_new": false
-        },
-        {
           "id": "e5ce7ef4-67ca-4538-add8-fefd46b06326",
           "created_at": 1650381060,
           "user": {
@@ -221,19 +169,6 @@
             "you": false
           },
           "message": "Ищу для работы в Дубай инженера - агронома , вдруг есть кандидаты \nСпасибо",
-          "is_new": false
-        },
-        {
-          "id": "c104bb72-34b5-48ba-9ad8-8307c405587d",
-          "created_at": 1650378600,
-          "user": {
-            "id": "be215077-594e-4256-82e8-906625c69629",
-            "name": "Clout",
-            "surname": "Profi",
-            "avatar": "https://avatars.lenzaos.com/O7bEEfltwNia.png",
-            "you": true
-          },
-          "message": "Главный вопрос- зачем он нужен. Жить , приезжать или работать ( разрешение)",
           "is_new": false
         },
         {
@@ -286,19 +221,6 @@
             "you": false
           },
           "message": "Девушки кто это здесь уже давно - поделитесь какие салоны тут хорошие. Парикмахер/маникюр/педикюр \nМерси",
-          "is_new": false
-        },
-        {
-          "id": "5a5632af-571e-4214-96b6-cf21585f9801",
-          "created_at": 1650369540,
-          "user": {
-            "id": "be215077-594e-4256-82e8-906625c69629",
-            "name": "Clout",
-            "surname": "Profi",
-            "avatar": "https://avatars.lenzaos.com/O7bEEfltwNia.png",
-            "you": true
-          },
-          "message": "Это теперь спорт такой - как оплатить нетфликс, гугл, букинг и прочее",
           "is_new": false
         },
         {

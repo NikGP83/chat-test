@@ -1,3 +1,4 @@
+import { appUrls } from './../../const/const';
 import { createApi  } from '@reduxjs/toolkit/query/react';
 import type { BaseQueryFn } from '@reduxjs/toolkit/query';
 import axios from 'axios';
@@ -34,7 +35,7 @@ const axiosBaseQuery =
 export const chatApi = createApi({
     reducerPath: 'chatApi',
     baseQuery: axiosBaseQuery({
-        baseUrl: 'https://api.lenzaos.com/test',
+        baseUrl: appUrls.baseUrl,
     }),
     endpoints: (build) => ({
         getSidebarDialogMsgData: build.query({

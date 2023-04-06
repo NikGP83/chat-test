@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { chatApi } from "../api/chat/chat-serivces";
+import { chatApi } from "../api/chat/chat-services";
 
 const rootReducer = combineReducers({
     [chatApi.reducerPath]: chatApi.reducer,

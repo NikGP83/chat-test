@@ -1,4 +1,4 @@
-import { useGetChatDataQuery, useGetSidebarDialogMsgDataQuery } from '../../api/chat/chat-serivces';
+import { useGetChatDataQuery, useGetSidebarDialogMsgDataQuery } from '../../api/chat/chat-services';
 import Header from '../header/header';
 import Message from '../message/message';
 import PostForm from '../post-form/post-form';
@@ -19,11 +19,11 @@ const mockData = [
 
 
 function MessageDesk() {
-  const sidebarDialogeMsgData = useGetSidebarDialogMsgDataQuery('user_message');
+  const dialogData = useGetSidebarDialogMsgDataQuery('user_message');
   const chatData = useGetChatDataQuery('chat')
   
 
-  console.log('chatMessageArr:', sidebarDialogeMsgData.data)
+  console.log('chatMessageArr:', dialogData.data)
   console.log('msgs:', chatData.data)
 
 

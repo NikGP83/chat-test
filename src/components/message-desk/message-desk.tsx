@@ -1,43 +1,28 @@
-import { useGetChatDataQuery, useGetSidebarDialogMsgDataQuery } from '../../api/chat/chat-services';
+import { useGetChatDataQuery } from '../../api/chat/chat-services';
+import { appUrls } from '../../const/const';
 import Header from '../header/header';
 import Message from '../message/message';
 import PostForm from '../post-form/post-form';
 import './message-desk.scss';
 
-const mockData = [
-  {
-    id: '1',
-    message: 'blah blah blah blah blah blah',
-    created_at: '21:21',
-    name: 'Diane',
-    surname: 'Russel',
-    avatar: '',
-    my: true,
-    main: true,
-  },
-];
-
 
 function MessageDesk() {
-  const dialogData = useGetSidebarDialogMsgDataQuery('user_message');
-  const chatData = useGetChatDataQuery('chat')
+  const {data} = useGetChatDataQuery(appUrls.userChatMessage);
   
 
-  console.log('chatMessageArr:', dialogData.data)
-  console.log('msgs:', chatData.data)
-
-
-  if (typeof chatData !== 'undefined') {
+  if (typeof data === 'undefined') {
+    return null;
+  }
     return (
       <>
         <div className='message-desk-wrapper'>
           <Header chatHeaderTitle='Great Project' />
           <div className='message-desk'>
-            {mockData.map((userMessage) => (
+            {data.map((userMessage) => (
               <div
                 key={userMessage.message}
                 className={`message-item ${
-                  !userMessage.my && `incoming-message-position`
+                  !userMessage.user.you && `incoming-message-position`
                 }`}
               >
                 <Message {...userMessage} />
@@ -48,7 +33,6 @@ function MessageDesk() {
         </div>
       </>
     );
-  }
 }
 
 export default MessageDesk;

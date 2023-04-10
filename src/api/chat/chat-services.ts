@@ -39,10 +39,10 @@ export const chatApi = createApi({
         baseUrl: appUrls.baseUrl,
     }),
     endpoints: (build) => ({
-        getSidebarDialogMsgData: build.query<ChatMessage, string>({
+        getSidebarDialogMsgData: build.query<ChatMessage[], string>({
             query: (url) => ({url: url, method: 'get'}),
         }),
-        getChatData: build.query<ChatMessage, string>({
+        getChatData: build.query<ChatMessage[], string>({
             query: (url) => ({url: url, method: 'get'}),
         })
     })

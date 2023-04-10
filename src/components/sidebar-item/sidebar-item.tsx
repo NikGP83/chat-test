@@ -1,28 +1,24 @@
+import { ChatMessage } from '../../types/types';
 import Avatar from '../avatar/avatar';
 import './sidebar-item.scss';
 
-interface SidebarProps {
-    user: object;
-    message: string;
-}
-// { user, message }: SidebarProps
 
-function SidebarItem() {
+function SidebarItem({user, message, created_at, is_new}:ChatMessage) {
   return (
     <>
     <div className='sidebar-item'>
       <div className='sidebar-item-avatar'>
-        <Avatar />
+        <Avatar {...user}/>
       </div>
       <div className='sidebar-item-info'>
         <div className='sidebar-user-info'>
-          <strong>Имя Фамилия</strong>
+          <strong>{user.name}</strong>
           <span>
-            {new Date().toLocaleTimeString()}
+            {created_at}
           </span>
         </div>
         <div className='sidebar-users-dialog'>
-            <p className='sidebar-text cut-text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae sequi vero maiores autem dolore voluptatem placeat tenetur, quasi debitis laudantium ullam temporibus assumenda dicta totam reprehenderit asperiores similique ab minus.</p>
+            <p className='sidebar-text cut-text'>{message}</p>
         </div>
       </div>
     </div>

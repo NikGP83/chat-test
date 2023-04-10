@@ -1,19 +1,23 @@
 import "./avatar.scss";
 
 interface AvatarProps {
-    src?: string;
     size?: "md" | "sm";
+    id: string;
+    name: string;
+    surname: string;
+    avatar: string;
+    you: boolean;
 }
 
 
 
-function Avatar ({src, size}: AvatarProps)  {
+function Avatar ({size, avatar}: AvatarProps)  {
 
     const className = `component-avatar component-avatar--${size}`;
 
     return (
         <div className={className}>
-            <img src={src} alt='User'/>
+            <img src={avatar} alt='User'/>
         </div>
     )
 }

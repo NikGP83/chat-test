@@ -1,40 +1,21 @@
 import Avatar from '../avatar/avatar';
 import readedIcon from '../../assets/img/vector.png';
 import './message.scss';
+import { ChatMessage } from '../../types/types';
 
-const avatarMock = {
-  src: '',
-};
 
-interface MessageProps {
-  id?: string;
-  message: string;
-  created_at: string;
-  name?: string;
-  surname?: string;
-  avatar?: string;
-  my: boolean;
-  main: boolean;
-}
 
-function Message({
-  id,
-  message,
-  created_at,
-  name,
-  surname,
-  avatar,
-  my,
-  main,
-}: MessageProps) {
+function Message({user, created_at, message}: ChatMessage) {
+
+  const {name, surname, you} = user;
   return (
     <div className='message-wrapper'>
       <div>
 
-      {!my && (
+      {!you && (
         <>
           <div className='message-avatar'>
-            <Avatar {...avatarMock} />
+            <Avatar {...user} />
           </div>
           <div className='users-block'>
             <span className='user-name'>{name}</span>
@@ -43,10 +24,10 @@ function Message({
         </>
       )}
       <div className='message-content'>
-        <div className={`message-bubble ${my && `your-message`}`}>
+        <div className={`message-bubble ${you && `your-message`}`}>
           <p className='message-text'>{message}</p>
           <div className='message-time'>{created_at}</div>
-          {my && (
+          {you && (
             <div className='message-readed'>
               <img src={readedIcon} alt='icon readed' />
             </div>

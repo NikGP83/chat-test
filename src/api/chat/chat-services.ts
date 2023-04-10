@@ -1,8 +1,9 @@
-import { appUrls } from './../../const/const';
+import { appUrls } from '../../const/const';
 import { createApi  } from '@reduxjs/toolkit/query/react';
 import type { BaseQueryFn } from '@reduxjs/toolkit/query';
 import axios from 'axios';
 import type { AxiosRequestConfig, AxiosError } from 'axios';
+import { ChatMessage } from '../../types/types';
 
 const axiosBaseQuery =
   (
@@ -38,10 +39,10 @@ export const chatApi = createApi({
         baseUrl: appUrls.baseUrl,
     }),
     endpoints: (build) => ({
-        getSidebarDialogMsgData: build.query({
+        getSidebarDialogMsgData: build.query<ChatMessage[], string>({
             query: (url) => ({url: url, method: 'get'}),
         }),
-        getChatData: build.query({
+        getChatData: build.query<ChatMessage[], string>({
             query: (url) => ({url: url, method: 'get'}),
         })
     })

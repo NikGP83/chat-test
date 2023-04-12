@@ -1,12 +1,23 @@
 import { ChatMessage } from '../../types/types';
+import { getTime } from '../../utils/utils';
 import Avatar from '../avatar/avatar';
 import './sidebar-item.scss';
 
+interface SideBarItemProps {
+  props: ChatMessage;
+  idHandler: (id: string) => void;
+}
 
-function SidebarItem({user, message, created_at, is_new}:ChatMessage) {
+
+function SidebarItem({props, idHandler}:SideBarItemProps) {
+  const {user, created_at, message, id} = props;
+  console.log(typeof id)
+  const setNewId = (idCard: string) => {
+    idHandler(idCard)
+  }
   return (
     <>
-    <div className='sidebar-item'>
+    <div onClick={() => setNewId(id)} className='sidebar-item'>
       <div className='sidebar-item-avatar'>
         <Avatar {...user}/>
       </div>
@@ -14,7 +25,7 @@ function SidebarItem({user, message, created_at, is_new}:ChatMessage) {
         <div className='sidebar-user-info'>
           <strong>{user.name}</strong>
           <span>
-            {created_at}
+            {getTime(created_at)}
           </span>
         </div>
         <div className='sidebar-users-dialog'>

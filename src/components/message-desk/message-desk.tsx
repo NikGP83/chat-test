@@ -1,22 +1,25 @@
 import { useGetChatDataQuery } from '../../api/chat/chat-services';
-import { appUrls } from '../../const/const';
-import Header from '../header/header';
+import Header from '../chat-header/chat-header';
 import Message from '../message/message';
 import PostForm from '../post-form/post-form';
 import './message-desk.scss';
 
+interface MessageDeskProps {
+  chatId: string;
+}
 
-function MessageDesk() {
-  const {data} = useGetChatDataQuery(appUrls.userChatMessage);
-  
-
+function MessageDesk({chatId}: MessageDeskProps) {
+  const {data} = useGetChatDataQuery(chatId);
+  console.log(chatId,data)
   if (typeof data === 'undefined') {
     return null;
   }
+  const [userData] = data;
     return (
       <>
         <div className='message-desk-wrapper'>
-          <Header chatHeaderTitle='Great Project' />
+          {}
+          <Header chatHeaderTitle={userData?.user.name}/>
           <div className='message-desk'>
             {data.map((userMessage) => (
               <div

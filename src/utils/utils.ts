@@ -1,0 +1,1 @@
+export const getTime = (mls: number) => new Date(mls).toLocaleDateString();

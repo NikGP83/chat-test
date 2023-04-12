@@ -1,4 +1,5 @@
 import { ChatMessage } from '../../types/types';
+import { getTime } from '../../utils/utils';
 import Avatar from '../avatar/avatar';
 import './sidebar-item.scss';
 
@@ -24,7 +25,7 @@ function SidebarItem({props, idHandler}:SideBarItemProps) {
         <div className='sidebar-user-info'>
           <strong>{user.name}</strong>
           <span>
-            {created_at}
+            {getTime(created_at)}
           </span>
         </div>
         <div className='sidebar-users-dialog'>

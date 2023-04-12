@@ -4,13 +4,14 @@
 .message-bubble {
   display: inline-block;
   background-color: #f3f3f3;
-  width: max-content;
+  width: 588px;
   padding: 8px 12px;
   border-radius: 4px;
 }
 
 .your-message {
   background-color: rgba(64, 126, 201, 0.16);
+  margin-right: 24px;
 }
 
 .message-text {

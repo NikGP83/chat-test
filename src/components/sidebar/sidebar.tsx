@@ -11,22 +11,23 @@ function Sidebar() {
 
   const idHandler = (id) => {
     setChatId(id);
-  }
+  };
   if (typeof data === 'undefined') {
     return null;
   }
-    return (
+  return (
+    <>
       <div className='sidebar'>
         <div className='chat-header'>All chats</div>
         <div>
           {data.map((dialog) => (
-            <SidebarItem key={dialog.id} props={dialog} idHandler={idHandler}/>
+            <SidebarItem key={dialog.id} props={dialog} idHandler={idHandler} />
           ))}
-                <MessageDesk chatId={chatId}/>
         </div>
       </div>
-    );
-  
+      <MessageDesk chatId={chatId} />
+    </>
+  );
 }
 
 export default Sidebar;

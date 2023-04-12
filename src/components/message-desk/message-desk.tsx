@@ -1,14 +1,13 @@
 import { useGetChatDataQuery } from '../../api/chat/chat-services';
-import { appUrls } from '../../const/const';
 import Header from '../header/header';
 import Message from '../message/message';
 import PostForm from '../post-form/post-form';
 import './message-desk.scss';
 
 
-function MessageDesk() {
-  const {data} = useGetChatDataQuery(appUrls.userChatMessage);
-  
+function MessageDesk({chatId}) {
+  const {data} = useGetChatDataQuery(chatId);
+  console.log(chatId,data)
 
   if (typeof data === 'undefined') {
     return null;
@@ -16,7 +15,7 @@ function MessageDesk() {
     return (
       <>
         <div className='message-desk-wrapper'>
-          <Header chatHeaderTitle='Great Project' />
+          <Header chatHeaderTitle='Great Project'/>
           <div className='message-desk'>
             {data.map((userMessage) => (
               <div

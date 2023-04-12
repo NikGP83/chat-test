@@ -2,11 +2,21 @@ import { ChatMessage } from '../../types/types';
 import Avatar from '../avatar/avatar';
 import './sidebar-item.scss';
 
+interface SideBarItemProps {
+  props: ChatMessage,
+  idHandler: void;
+}
 
-function SidebarItem({user, message, created_at, is_new}:ChatMessage) {
+
+function SidebarItem({props, idHandler}:SideBarItemProps) {
+  const {user, created_at, message, id} = props;
+
+  const setNewId = (idCard) => {
+    idHandler(idCard)
+  }
   return (
     <>
-    <div className='sidebar-item'>
+    <div onClick={() => setNewId(id)} className='sidebar-item'>
       <div className='sidebar-item-avatar'>
         <Avatar {...user}/>
       </div>

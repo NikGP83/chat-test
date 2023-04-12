@@ -1,9 +1,9 @@
-import { appUrls } from '../../const/const';
 import { createApi  } from '@reduxjs/toolkit/query/react';
 import type { BaseQueryFn } from '@reduxjs/toolkit/query';
 import axios from 'axios';
 import type { AxiosRequestConfig, AxiosError } from 'axios';
 import { ChatMessage } from '../../types/types';
+import { appUrls } from '../../const/const';
 
 const axiosBaseQuery =
   (
@@ -43,7 +43,7 @@ export const chatApi = createApi({
             query: (url) => ({url: url, method: 'get'}),
         }),
         getChatData: build.query<ChatMessage[], string>({
-            query: (url) => ({url: url, method: 'get'}),
+            query: (id) => ({url:`/chat?id=${id}`, method: 'get'}),
         })
     })
 })

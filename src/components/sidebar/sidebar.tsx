@@ -7,9 +7,9 @@ import MessageDesk from '../message-desk/message-desk';
 
 function Sidebar() {
   const { data } = useGetSidebarDialogMsgDataQuery(appUrls.dialog);
-  const [chatId, setChatId] = useState(0);
+  const [chatId, setChatId] = useState('0');
 
-  const idHandler = (id) => {
+  const idHandler = (id: string) => {
     setChatId(id);
   };
   if (typeof data === 'undefined') {

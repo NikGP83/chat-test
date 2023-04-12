@@ -4,15 +4,17 @@ import Message from '../message/message';
 import PostForm from '../post-form/post-form';
 import './message-desk.scss';
 
+interface MessageDeskProps {
+  chatId: string;
+}
 
-function MessageDesk({chatId}) {
+function MessageDesk({chatId}: MessageDeskProps) {
   const {data} = useGetChatDataQuery(chatId);
   console.log(chatId,data)
   if (typeof data === 'undefined') {
     return null;
   }
   const [userData] = data;
-  console.log(userData)
     return (
       <>
         <div className='message-desk-wrapper'>

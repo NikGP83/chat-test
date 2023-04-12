@@ -4,15 +4,15 @@ import Avatar from '../avatar/avatar';
 import './sidebar-item.scss';
 
 interface SideBarItemProps {
-  props: ChatMessage,
-  idHandler: void;
+  props: ChatMessage;
+  idHandler: (id: string) => void;
 }
 
 
 function SidebarItem({props, idHandler}:SideBarItemProps) {
   const {user, created_at, message, id} = props;
-
-  const setNewId = (idCard) => {
+  console.log(typeof id)
+  const setNewId = (idCard: string) => {
     idHandler(idCard)
   }
   return (

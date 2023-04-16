@@ -1,7 +1,12 @@
 import Input from '../input/input';
 import './post-form.scss';
 
-function PostForm() {
+interface PostFormProps {
+  chatId: string | undefined;
+}
+
+function PostForm({chatId}:PostFormProps) {
+  console.log(chatId)
   return (
     <div className='post-form-wrapper'>
       <form method='post'>

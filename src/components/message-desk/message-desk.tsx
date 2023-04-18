@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useGetChatDataQuery } from '../../api/chat/chat-services';
 import Header from '../chat-header/chat-header';
 import Message from '../message/message';
@@ -6,17 +7,25 @@ import './message-desk.scss';
 
 interface MessageDeskProps {
   chatId: string;
+  getUserMessage: (msg: object) => void;
 }
 
 function MessageDesk({ chatId }: MessageDeskProps) {
+
+  const [userMessages, setUserMessages] = useState()
   const { data } = useGetChatDataQuery(chatId, {
     pollingInterval: 1000000,
   });
-  console.log(chatId, data);
+  
+  const getUserMessage = (msg: object): void => {
+    setUserMessages([{...userMessages, msg}])
+  } 
+
   if (typeof data === 'undefined') {
     return null;
   }
   const [userData] = data;
+
   return (
     <>
       <div className='message-desk-wrapper'>
@@ -33,7 +42,7 @@ function MessageDesk({ chatId }: MessageDeskProps) {
             </div>
           ))}
         </div>
-        <PostForm chatId={chatId} />
+        {userData && <PostForm chatId={chatId} getUserMessage={getUserMessage}/>}
       </div>
     </>
   );

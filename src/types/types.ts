@@ -14,3 +14,10 @@ export interface ChatMessage {
           message: string;
           is_new: boolean;
 }
+
+export interface PostFormMessage {
+  id: string | undefined;
+  created_at: number;
+  message: string;
+  you: boolean;
+}

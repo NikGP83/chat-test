@@ -21,7 +21,6 @@ function MessageDesk({ chatId }: MessageDeskProps) {
     return null;
   }
   const [userData] = data;
-  console.log(userData)
   return (
     <>
       <div className='message-desk-wrapper'>

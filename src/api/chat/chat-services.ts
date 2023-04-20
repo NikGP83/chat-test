@@ -2,7 +2,7 @@ import { createApi } from '@reduxjs/toolkit/query/react';
 import type { BaseQueryFn } from '@reduxjs/toolkit/query';
 import axios from 'axios';
 import type { AxiosRequestConfig, AxiosError } from 'axios';
-import { ChatMessage } from '../../types/types';
+import { ChatMessage, PostFormMessage } from '../../types/types';
 import { appUrls } from '../../const/const';
 
 const axiosBaseQuery =
@@ -45,17 +45,11 @@ export const chatApi = createApi({
     }),
     getChatData: build.query<ChatMessage[], string>({
       query: (id) => ({ url: `/chat?id=${id}`, method: 'get' }),
-      providesTags: (result) =>
-        result
-          ? [
-              ...result.map(({ id }) => ({ type: 'Messages' as const, id })),
-              { type: 'Messages', id: 'LIST' },
-            ]
-          : [{ type: 'Messages', id: 'LIST' }],
+      providesTags: (result) => ['Messages']
     }),
-    addMessage: build.mutation<ChatMessage, object>({
-      query: (body) => ({ url: `/chat}`, method: 'POST', body }),
-      invalidatesTags: [{ type: 'Messages', id: 'LIST' }],
+    addMessage: build.mutation<PostFormMessage, PostFormMessage>({
+      query: ({...message}) => ({ url: '/chat', method: 'POST', body: message }),
+      invalidatesTags: ['Messages'],
     }),
   }),
 });

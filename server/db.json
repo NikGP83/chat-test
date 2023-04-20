@@ -1,5 +1,5 @@
 {
-    "chat": [
+  "chat": [
     {
       "id": "48df3f19-5862-4acb-b6d1-178ecfd1f837",
       "created_at": 1650386700123,
@@ -131,136 +131,136 @@
       "is_new": false
     }
   ],
-    "dialog" :[
-        {
-          "id": "48df3f19-5862-4acb-b6d1-178ecfd1f837",
-          "created_at": 1650386700123,
-          "user": {
-            "id": "86ef07b5-c60f-492a-9f4a-29f3d83810fb",
-            "name": "Yuri",
-            "surname": "Crab",
-            "avatar": "https://ui-avatars.com/api/?name=Yuri+Crab&background=random",
-            "you": false
-          },
-          "message": "Добрый день. кто может рассказать про варианты и подводные камни при открытии компании и счета в Дубаи?",
-          "is_new": true
-        },
-        {
-          "id": "37dc5269-183b-41d5-9920-657f3f583100",
-          "created_at": 1650381900123,
-          "user": {
-            "id": "b7cbf62b-d30c-413f-bca9-9fafa4fed1e8",
-            "name": "Екатерина",
-            "surname": "Румянцева",
-            "avatar": "https://ui-avatars.com/api/?name=Екатерина+Румянцева&background=random",
-            "you": false
-          },
-          "message": "+",
-          "is_new": true
-        },
-        {
-          "id": "e5ce7ef4-67ca-4538-add8-fefd46b06326",
-          "created_at": 1650381060123,
-          "user": {
-            "id": "b7cbf62b-d30c-413f-bca9-9fafa4fed1e8",
-            "name": "Екатерина",
-            "surname": "Румянцева",
-            "avatar": "https://ui-avatars.com/api/?name=Екатерина+Румянцева&background=random",
-            "you": false
-          },
-          "message": "Ищу для работы в Дубай инженера - агронома , вдруг есть кандидаты \nСпасибо",
-          "is_new": false
-        },
-        {
-          "id": "9d97f33b-1e58-4bb8-8850-23bae6c07928",
-          "created_at": 1650377700123,
-          "user": {
-            "id": "86ef07b5-c60f-492a-9f4a-29f3d83810fb",
-            "name": "Yuri",
-            "surname": "Crab",
-            "avatar": "https://ui-avatars.com/api/?name=Yuri+Crab&background=random",
-            "you": false
-          },
-          "message": "Друзья, посоветуйте кто и как решает сейчас вопрос с помощью в получении ВНЖ/ПМЖ в ЕС ? \nP.s. напишите в лс если кто делает.",
-          "is_new": false
-        },
-        {
-          "id": "ae4ba454-6cae-446b-a25d-3c8b558ee9b5",
-          "created_at": 1650375060123,
-          "user": {
-            "id": "f9e198a7-576c-4b08-8896-d5f3d220dbfe",
-            "name": "Анастасия",
-            "surname": "Кошкарова",
-            "avatar": "https://ui-avatars.com/api/?name=Анастасия+Кошкарова&background=random",
-            "you": false
-          },
-          "message": "Или Краснодар",
-          "is_new": false
-        },
-        {
-          "id": "0dcbe44f-e27d-44fc-8e78-4e331c8f2fb8",
-          "created_at": 1650375059123,
-          "user": {
-            "id": "f9e198a7-576c-4b08-8896-d5f3d220dbfe",
-            "name": "Анастасия",
-            "surname": "Кошкарова",
-            "avatar": "https://ui-avatars.com/api/?name=Анастасия+Кошкарова&background=random",
-            "you": false
-          },
-          "message": "Ребята, привет! Может кто то летит в Сочи на днях?",
-          "is_new": false
-        },
-        {
-          "id": "9d13a47e-48ba-4ba5-ae76-2bdcdf04e340",
-          "created_at": 1650374940123,
-          "user": {
-            "id": "caa16bda-a624-4b83-95e3-db6bdff1baee",
-            "name": "Anna",
-            "surname": "Triff",
-            "avatar": "https://ui-avatars.com/api/?name=Anna+Triff&background=random",
-            "you": false
-          },
-          "message": "Девушки кто это здесь уже давно - поделитесь какие салоны тут хорошие. Парикмахер/маникюр/педикюр \nМерси",
-          "is_new": false
-        },
-        {
-          "id": "a40a66af-d893-4a3e-b03a-898f2cc5f9b2",
-          "created_at": 1650327300123,
-          "user": {
-            "id": "caa16bda-a624-4b83-95e3-db6bdff1baee",
-            "name": "Anna",
-            "surname": "Triff",
-            "avatar": "https://ui-avatars.com/api/?name=Anna+Triff&background=random",
-            "you": false
-          },
-          "message": "Вот это не работает, если чисто UP работает",
-          "is_new": false
-        },
-        {
-          "id": "ff2a9f46-82c5-4bc9-b3f7-b0b1991a23d7",
-          "created_at": 1650319560123,
-          "user": {
-            "id": "7a52f18d-ad8f-43cc-bda7-00213f2a91f7",
-            "name": "Victoria",
-            "surname": "Pechenkina",
-            "avatar": "https://ui-avatars.com/api/?name=Victoria+Pechenkina&background=random",
-            "you": false
-          },
-          "message": "Прекрасно работает пластик живой , плачу практически везде",
-          "is_new": false
-        },
-        {
-          "id": "4acfaca2-a212-4bda-8278-14ab181f781c",
-          "created_at": 1650319440123,
-          "user": {
-            "id": "7a52f18d-ad8f-43cc-bda7-00213f2a91f7",
-            "name": "Victoria",
-            "surname": "Pechenkina",
-            "avatar": "https://ui-avatars.com/api/?name=Victoria+Pechenkina&background=random",
-            "you": false
-          },
-          "message": "У меня работает везде -все супермаркеты, Рестораны , магазины - все берут . Вопрос в том что им не надо говорить - надо платить , многие не знают , что карта работает и сами говорят «нет»",
-          "is_new": false
-        }
-      ]
+  "dialog": [
+    {
+      "id": "48df3f19-5862-4acb-b6d1-178ecfd1f837",
+      "created_at": 1650386700123,
+      "user": {
+        "id": "86ef07b5-c60f-492a-9f4a-29f3d83810fb",
+        "name": "Yuri",
+        "surname": "Crab",
+        "avatar": "https://ui-avatars.com/api/?name=Yuri+Crab&background=random",
+        "you": false
+      },
+      "message": "Добрый день. кто может рассказать про варианты и подводные камни при открытии компании и счета в Дубаи?",
+      "is_new": true
+    },
+    {
+      "id": "37dc5269-183b-41d5-9920-657f3f583100",
+      "created_at": 1650381900123,
+      "user": {
+        "id": "b7cbf62b-d30c-413f-bca9-9fafa4fed1e8",
+        "name": "Екатерина",
+        "surname": "Румянцева",
+        "avatar": "https://ui-avatars.com/api/?name=Екатерина+Румянцева&background=random",
+        "you": false
+      },
+      "message": "+",
+      "is_new": true
+    },
+    {
+      "id": "e5ce7ef4-67ca-4538-add8-fefd46b06326",
+      "created_at": 1650381060123,
+      "user": {
+        "id": "b7cbf62b-d30c-413f-bca9-9fafa4fed1e8",
+        "name": "Екатерина",
+        "surname": "Румянцева",
+        "avatar": "https://ui-avatars.com/api/?name=Екатерина+Румянцева&background=random",
+        "you": false
+      },
+      "message": "Ищу для работы в Дубай инженера - агронома , вдруг есть кандидаты \nСпасибо",
+      "is_new": false
+    },
+    {
+      "id": "9d97f33b-1e58-4bb8-8850-23bae6c07928",
+      "created_at": 1650377700123,
+      "user": {
+        "id": "86ef07b5-c60f-492a-9f4a-29f3d83810fb",
+        "name": "Yuri",
+        "surname": "Crab",
+        "avatar": "https://ui-avatars.com/api/?name=Yuri+Crab&background=random",
+        "you": false
+      },
+      "message": "Друзья, посоветуйте кто и как решает сейчас вопрос с помощью в получении ВНЖ/ПМЖ в ЕС ? \nP.s. напишите в лс если кто делает.",
+      "is_new": false
+    },
+    {
+      "id": "ae4ba454-6cae-446b-a25d-3c8b558ee9b5",
+      "created_at": 1650375060123,
+      "user": {
+        "id": "f9e198a7-576c-4b08-8896-d5f3d220dbfe",
+        "name": "Анастасия",
+        "surname": "Кошкарова",
+        "avatar": "https://ui-avatars.com/api/?name=Анастасия+Кошкарова&background=random",
+        "you": false
+      },
+      "message": "Или Краснодар",
+      "is_new": false
+    },
+    {
+      "id": "0dcbe44f-e27d-44fc-8e78-4e331c8f2fb8",
+      "created_at": 1650375059123,
+      "user": {
+        "id": "f9e198a7-576c-4b08-8896-d5f3d220dbfe",
+        "name": "Анастасия",
+        "surname": "Кошкарова",
+        "avatar": "https://ui-avatars.com/api/?name=Анастасия+Кошкарова&background=random",
+        "you": false
+      },
+      "message": "Ребята, привет! Может кто то летит в Сочи на днях?",
+      "is_new": false
+    },
+    {
+      "id": "9d13a47e-48ba-4ba5-ae76-2bdcdf04e340",
+      "created_at": 1650374940123,
+      "user": {
+        "id": "caa16bda-a624-4b83-95e3-db6bdff1baee",
+        "name": "Anna",
+        "surname": "Triff",
+        "avatar": "https://ui-avatars.com/api/?name=Anna+Triff&background=random",
+        "you": false
+      },
+      "message": "Девушки кто это здесь уже давно - поделитесь какие салоны тут хорошие. Парикмахер/маникюр/педикюр \nМерси",
+      "is_new": false
+    },
+    {
+      "id": "a40a66af-d893-4a3e-b03a-898f2cc5f9b2",
+      "created_at": 1650327300123,
+      "user": {
+        "id": "caa16bda-a624-4b83-95e3-db6bdff1baee",
+        "name": "Anna",
+        "surname": "Triff",
+        "avatar": "https://ui-avatars.com/api/?name=Anna+Triff&background=random",
+        "you": false
+      },
+      "message": "Вот это не работает, если чисто UP работает",
+      "is_new": false
+    },
+    {
+      "id": "ff2a9f46-82c5-4bc9-b3f7-b0b1991a23d7",
+      "created_at": 1650319560123,
+      "user": {
+        "id": "7a52f18d-ad8f-43cc-bda7-00213f2a91f7",
+        "name": "Victoria",
+        "surname": "Pechenkina",
+        "avatar": "https://ui-avatars.com/api/?name=Victoria+Pechenkina&background=random",
+        "you": false
+      },
+      "message": "Прекрасно работает пластик живой , плачу практически везде",
+      "is_new": false
+    },
+    {
+      "id": "4acfaca2-a212-4bda-8278-14ab181f781c",
+      "created_at": 1650319440123,
+      "user": {
+        "id": "7a52f18d-ad8f-43cc-bda7-00213f2a91f7",
+        "name": "Victoria",
+        "surname": "Pechenkina",
+        "avatar": "https://ui-avatars.com/api/?name=Victoria+Pechenkina&background=random",
+        "you": false
+      },
+      "message": "У меня работает везде -все супермаркеты, Рестораны , магазины - все берут . Вопрос в том что им не надо говорить - надо платить , многие не знают , что карта работает и сами говорят «нет»",
+      "is_new": false
+    }
+  ]
 }

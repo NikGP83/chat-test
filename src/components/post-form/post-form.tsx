@@ -15,15 +15,20 @@ const initialFormData = {
 }
 
 function PostForm({ chatId }: PostFormProps) {
+  const [userMessage, setUserMessage] = useState<PostFormMessage>(initialFormData);
   const [addMessage] = useAddMessageMutation();
 
-  const [userMessage, setUserMessage] = useState<PostFormMessage>(initialFormData);
 
   const submitHandler = async(e: React.FormEvent) => {
     e.preventDefault();
     const newMessage = {...userMessage, created_at: Date.now()}
+    try {
+      
+      await addMessage(newMessage as PostFormMessage).unwrap();
+    } catch (error) {
+      console.log(error)
+    }
 
-        await addMessage(newMessage as PostFormMessage).unwrap();
 
 
       setUserMessage(initialFormData);
@@ -37,7 +42,7 @@ function PostForm({ chatId }: PostFormProps) {
           onChange={(e) =>
             setUserMessage({
               ...userMessage,
-              id: chatId,
+              id: '23',
               message: e.target.value,
               you: true,
             })

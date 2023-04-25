@@ -14,7 +14,7 @@ export const chatApi = createApi({
       query: (url) => ({ url: url, method: 'get' }),
     }),
     getChatData: build.query<ChatMessage[], string>({
-      query: (id) => ({ url: `/chat?id=${id}`, method: 'get' }),
+      query: (id) => ({ url: `/chat?dialog=${id}`, method: 'get' }),
       providesTags: (result) => ['Messages'],
     }),
     addMessage: build.mutation<PostFormMessage, PostFormMessage>({

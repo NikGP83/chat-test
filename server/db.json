@@ -1,7 +1,8 @@
 {
-  "chat": [
+  "chat":[
     {
       "id": "48df3f19-5862-4acb-b6d1-178ecfd1f837",
+      "dialog": "48df3f19-5862-4acb-b6d1-178ecfd1f837",
       "created_at": 1650386700123,
       "user": {
         "id": "86ef07b5-c60f-492a-9f4a-29f3d83810fb",
@@ -11,6 +12,34 @@
         "you": false
       },
       "message": "Добрый день. кто может рассказать про варианты и подводные камни при открытии компании и счета в Дубаи?",
+      "is_new": true
+    },
+    {
+      "id": "37dc5269-183b-41d5-9920-657f3f583100",
+      "dialog": "48df3f19-5862-4acb-b6d1-178ecfd1f837",
+      "created_at": 1650381900123,
+      "user": {
+        "id": "b7cbf62b-d30c-413f-bca9-9fafa4fed1e8",
+        "name": "Екатерина",
+        "surname": "Румянцева",
+        "avatar": "https://ui-avatars.com/api/?name=Екатерина+Румянцева&background=random",
+        "you": false
+      },
+      "message": "+",
+      "is_new": true
+    },
+    {
+      "id": "37dc5269-183b-41d5-9920-657f3f583100",
+      "dialog": "37dc5269-183b-41d5-9920-657f3f583100",
+      "created_at": 1650381900123,
+      "user": {
+        "id": "b7cbf62b-d30c-413f-bca9-9fafa4fed1e8",
+        "name": "Екатерина",
+        "surname": "Румянцева",
+        "avatar": "https://ui-avatars.com/api/?name=Екатерина+Румянцева&background=random",
+        "you": false
+      },
+      "message": "+",
       "is_new": true
     },
     {
@@ -129,12 +158,6 @@
       },
       "message": "У меня работает везде -все супермаркеты, Рестораны , магазины - все берут . Вопрос в том что им не надо говорить - надо платить , многие не знают , что карта работает и сами говорят «нет»",
       "is_new": false
-    },
-    {
-      "id": "23",
-      "created_at": 1681985276367,
-      "message": "Привет! Краб!",
-      "you": true
     }
   ],
   "dialog": [

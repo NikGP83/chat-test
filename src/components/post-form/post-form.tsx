@@ -8,7 +8,7 @@ interface PostFormProps {
 }
 
 const initialFormData = {
-  id: '',
+  dialog: '',
   created_at: 0,
   message: '',
   you: false,
@@ -42,7 +42,7 @@ function PostForm({ chatId }: PostFormProps) {
           onChange={(e) =>
             setUserMessage({
               ...userMessage,
-              id: '23',
+              id: chatId,
               message: e.target.value,
               you: true,
             })

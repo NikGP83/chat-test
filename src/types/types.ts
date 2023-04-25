@@ -16,7 +16,8 @@ export interface ChatMessage {
 }
 
 export interface PostFormMessage {
-  id: string | undefined;
+  id?: string | undefined;
+  dialog: string | undefined;
   created_at: number;
   message: string;
   you: boolean;

@@ -143,6 +143,15 @@
         "you": true
       },
       "message": "Да да, снова я!"
+    },
+    {
+      "id": "1682419924392",
+      "dialog": "48df3f19-5862-4acb-b6d1-178ecfd1f837",
+      "created_at": 1682419924392,
+      "user": {
+        "you": true
+      },
+      "message": "могу же"
     }
   ],
   "dialog": [

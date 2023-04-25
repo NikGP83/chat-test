@@ -24,7 +24,15 @@ function PostForm({ chatId }: PostFormProps) {
 
   const submitHandler = async (e: React.FormEvent) => {
     e.preventDefault();
-    const newMessage = { ...userMessage, created_at: Date.now() };
+    const newMessage = {
+      ...userMessage,
+      id: Date.now().toString(),
+      dialog: chatId,
+      created_at: Date.now(),
+      user: {
+        you: true,
+      },
+    };
     try {
       await addMessage(newMessage as PostFormMessage).unwrap();
     } catch (error) {
@@ -40,16 +48,7 @@ function PostForm({ chatId }: PostFormProps) {
         <input
           value={userMessage.message}
           onChange={(e) =>
-            setUserMessage({
-              ...userMessage,
-              id: Date.now().toString(),
-              dialog: chatId,
-              created_at: Date.now(),
-              user: {
-                you: true,
-              },
-              message: e.target.value,
-            })
+            setUserMessage({...userMessage, message: e.target.value})
           }
           placeholder='Type message'
           type='text'

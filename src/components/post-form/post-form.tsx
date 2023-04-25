@@ -8,30 +8,30 @@ interface PostFormProps {
 }
 
 const initialFormData = {
+  id: '',
   dialog: '',
   created_at: 0,
+  user: {
+    you: false,
+  },
   message: '',
-  you: false,
-}
+};
 
 function PostForm({ chatId }: PostFormProps) {
-  const [userMessage, setUserMessage] = useState<PostFormMessage>(initialFormData);
+  const [userMessage, setUserMessage] =
+    useState<PostFormMessage>(initialFormData);
   const [addMessage] = useAddMessageMutation();
 
-
-  const submitHandler = async(e: React.FormEvent) => {
+  const submitHandler = async (e: React.FormEvent) => {
     e.preventDefault();
-    const newMessage = {...userMessage, created_at: Date.now()}
+    const newMessage = { ...userMessage, created_at: Date.now() };
     try {
-      
       await addMessage(newMessage as PostFormMessage).unwrap();
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
 
-
-
-      setUserMessage(initialFormData);
+    setUserMessage(initialFormData);
   };
 
   return (
@@ -42,9 +42,13 @@ function PostForm({ chatId }: PostFormProps) {
           onChange={(e) =>
             setUserMessage({
               ...userMessage,
-              id: chatId,
+              id: Date.now().toString(),
+              dialog: chatId,
+              created_at: Date.now(),
+              user: {
+                you: true,
+              },
               message: e.target.value,
-              you: true,
             })
           }
           placeholder='Type message'

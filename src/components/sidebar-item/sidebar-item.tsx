@@ -11,7 +11,6 @@ interface SideBarItemProps {
 
 function SidebarItem({props, idHandler}:SideBarItemProps) {
   const {user, created_at, message, id} = props;
-  console.log(typeof id)
   const setNewId = (idCard: string) => {
     idHandler(idCard)
   }

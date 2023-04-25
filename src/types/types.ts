@@ -1,4 +1,3 @@
-
 export interface User {
   id: string;
   name: string;
@@ -8,9 +7,19 @@ export interface User {
 }
 
 export interface ChatMessage {
-          id: string;
-          created_at: number;
-          user: User;
-          message: string;
-          is_new: boolean;
+  id: string;
+  created_at: number;
+  user: User;
+  message: string;
+  is_new: boolean;
+}
+
+export interface PostFormMessage {
+  id?: string | undefined;
+  dialog: string | undefined;
+  created_at: number;
+  user: {
+    you: boolean;
+  };
+  message: string;
 }

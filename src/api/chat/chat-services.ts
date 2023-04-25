@@ -1,51 +1,36 @@
-import { createApi  } from '@reduxjs/toolkit/query/react';
-import type { BaseQueryFn } from '@reduxjs/toolkit/query';
-import axios from 'axios';
-import type { AxiosRequestConfig, AxiosError } from 'axios';
-import { ChatMessage } from '../../types/types';
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { ChatMessage, PostFormMessage } from '../../types/types';
 import { appUrls } from '../../const/const';
 
-const axiosBaseQuery =
-  (
-    { baseUrl }: { baseUrl: string } = { baseUrl: '' }
-  ): BaseQueryFn<
-    {
-      url: string
-      method: AxiosRequestConfig['method']
-      data?: AxiosRequestConfig['data']
-      params?: AxiosRequestConfig['params']
-    },
-    unknown,
-    unknown
-  > =>
-  async ({ url, method, data, params }) => {
-    try {
-      const result = await axios({ url: baseUrl + url, method, data, params })
-      return { data: result.data }
-    } catch (axiosError) {
-      let err = axiosError as AxiosError
-      return {
-        error: {
-          status: err.response?.status,
-          data: err.response?.data || err.message,
-        },
-      }
-    }
-  }
 
 export const chatApi = createApi({
-    reducerPath: 'chatApi',
-    baseQuery: axiosBaseQuery({
-        baseUrl: appUrls.baseUrl,
+  reducerPath: 'chatApi',
+  tagTypes: ['Messages'],
+  baseQuery: fetchBaseQuery({
+    baseUrl: appUrls.baseUrl,
+  }),
+  endpoints: (build) => ({
+    getSidebarDialogMsgData: build.query<ChatMessage[], string>({
+      query: (url) => ({ url: url, method: 'get' }),
     }),
-    endpoints: (build) => ({
-        getSidebarDialogMsgData: build.query<ChatMessage[], string>({
-            query: (url) => ({url: url, method: 'get'}),
-        }),
-        getChatData: build.query<ChatMessage[], string>({
-            query: (id) => ({url:`/chat?id=${id}`, method: 'get'}),
-        })
-    })
-})
+    getChatData: build.query<ChatMessage[], string>({
+      query: (id) => ({ url: `/chat?dialog=${id}`, method: 'get' }),
+      providesTags: (result) => ['Messages'],
+    }),
+    addMessage: build.mutation<PostFormMessage, PostFormMessage>({
+      query: (body) => ({
+        url: appUrls.userChatMessage,
+        method: 'POST',
+        body,
+      }),
 
-export const {useGetChatDataQuery, useGetSidebarDialogMsgDataQuery} = chatApi;
+      invalidatesTags: ['Messages'],
+    }),
+  }),
+});
+
+export const {
+  useGetChatDataQuery,
+  useGetSidebarDialogMsgDataQuery,
+  useAddMessageMutation,
+} = chatApi;

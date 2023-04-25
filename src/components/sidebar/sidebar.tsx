@@ -6,9 +6,10 @@ import { appUrls } from '../../const/const';
 import MessageDesk from '../message-desk/message-desk';
 
 function Sidebar() {
-  const { data } = useGetSidebarDialogMsgDataQuery(appUrls.dialog);
+  const { data } = useGetSidebarDialogMsgDataQuery(appUrls.dialog, {
+    pollingInterval: 10000,
+  });
   const [chatId, setChatId] = useState('0');
-
   const idHandler = (id: string) => {
     setChatId(id);
   };

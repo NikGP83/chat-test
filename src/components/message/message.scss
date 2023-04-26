@@ -5,8 +5,12 @@
   display: inline-block;
   background-color: #f3f3f3;
   width: 588px;
-  padding: 8px 12px;
+  padding: 12px 8px;
   border-radius: 4px;
+}
+
+.users-block {
+  display: flex;
 }
 
 .your-message {
@@ -17,6 +21,7 @@
 .message-text {
   font-size: 15px;
   line-height: 20px;
+  margin: 0;
 }
 
 .message-time {

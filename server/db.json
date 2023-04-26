@@ -152,6 +152,15 @@
         "you": true
       },
       "message": "могу же"
+    },
+    {
+      "id": "1682506309422",
+      "dialog": "e5ce7ef4-67ca-4538-add8-fefd46b06326",
+      "created_at": 1682506309422,
+      "user": {
+        "you": true
+      },
+      "message": "Есть программист"
     }
   ],
   "dialog": [

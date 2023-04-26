@@ -18,12 +18,12 @@ function SidebarItem({props, idHandler}:SideBarItemProps) {
     <>
     <div onClick={() => setNewId(id)} className='sidebar-item'>
       <div className='sidebar-item-avatar'>
-        <Avatar {...user}/>
+        <Avatar {...user} size={'md'}/>
       </div>
-      <div className='sidebar-item-info'>
-        <div className='sidebar-user-info'>
-          <strong>{user.name}</strong>
-          <span>
+      <div className='sidebar-info-block'>
+        <div className='user-info'>
+          <span className='user-name'>{user.name}</span>
+          <span className='created-at'>
             {getTime(created_at)}
           </span>
         </div>

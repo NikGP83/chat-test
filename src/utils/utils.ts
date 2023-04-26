@@ -1,1 +1,1 @@
-export const getTime = (mls: number):number => +(new Date(mls).toLocaleDateString());
+export const getTime = (mls: number):string => new Date(mls).toLocaleDateString();

@@ -16,8 +16,8 @@ function Avatar ({size, avatar}: AvatarProps)  {
     const className = `component-avatar component-avatar--${size}`;
 
     return (
-        <div className={className}>
-            <img src={avatar} alt='User'/>
+        <div className="avatar-wrapper">
+            <img src={avatar} alt='User' className={className}/>
         </div>
     )
 }

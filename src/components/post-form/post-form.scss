@@ -1,9 +1,17 @@
+.post-form-wrapper {
+  padding-bottom: 35px;
+}
+
+.form-button-wrapper {
+  position: relative;
+  left: 14px;
+  bottom: 5px;
+}
+
 .post-form-button {
   background: url(../../assets/img/send-icon.png) 50% 50% no-repeat;
   background-size: contain;
   border: none;
-  width: 100px;
-  height: 50px;
   width: 19.5px;
   height: 19.51px;
   cursor: pointer;

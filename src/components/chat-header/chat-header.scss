@@ -5,6 +5,10 @@
   box-shadow: inset 0px -1px 0px rgba(32, 31, 30, 0.12);
 }
 
+.chat-header-wrapper{
+  display: flex;
+}
+
 .chat-header-text {
   font-weight: 700;
   font-size: 18px;

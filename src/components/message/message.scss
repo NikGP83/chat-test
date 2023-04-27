@@ -1,22 +1,23 @@
-.message-wrapper{
-  // display: flex;
-}
 .message-bubble {
   display: inline-block;
-  background-color: #f3f3f3;
-  width: 588px;
-  padding: 8px 12px;
-  border-radius: 4px;
+  background-color: rgba(64, 126, 201, 0.16);
+  max-width: 588px;
+  padding: 12px 8px;
+  border-radius: 8px;
 }
 
-.your-message {
-  background-color: rgba(64, 126, 201, 0.16);
-  margin-right: 24px;
+.message-partner-bubble{
+  background-color: #f3f3f3;
+} 
+.users-block {
+  display: flex;
 }
 
 .message-text {
+  display: flex;
   font-size: 15px;
   line-height: 20px;
+  margin: 0;
 }
 
 .message-time {
@@ -32,4 +33,18 @@
   font-size: 15px;
   line-height: 20px;
   color: #201f1e;
+}
+
+
+.messages-attributes {
+  display: flex;
+  align-items: end;
+  width: 50px;
+  margin-left: 8px;
+}
+
+.message-readed {
+  position: relative;
+  left: 7px;
+  top: 4px;
 }

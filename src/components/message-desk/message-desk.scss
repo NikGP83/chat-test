@@ -1,17 +1,25 @@
 .message-desk-wrapper {
   width: 100%;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 .message-desk{
+  display: flex;
+  flex-direction: column;
   height: 644px;
   overflow: hidden;
 }
 
-// .message-item {
-//   display: flex;
-//   justify-content: flex-end;
-// }
+.message-item {
+  margin-right: 24px;
+  margin-left: auto;
+  margin-bottom: 4px;
+}
 
-// .incoming-message-position {
-//   justify-content: flex-start;
-// }
+.incoming-message-position {
+  margin-right: auto;
+  margin-left: 35px;
+  margin-top: 34px;
+}

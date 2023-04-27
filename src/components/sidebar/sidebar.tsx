@@ -4,6 +4,7 @@ import './sidebar.scss';
 import { useGetSidebarDialogMsgDataQuery } from '../../api/chat/chat-services';
 import { appUrls } from '../../const/const';
 import MessageDesk from '../message-desk/message-desk';
+import Input from '../input/input';
 
 function Sidebar() {
   const { data } = useGetSidebarDialogMsgDataQuery(appUrls.dialog, {
@@ -19,7 +20,9 @@ function Sidebar() {
   return (
     <>
       <div className='sidebar'>
-        <div className='chat-header'>All chats</div>
+        <div className='sidebar-search-block'>
+          <Input type='text' placeholder='search' />
+        </div>
         <div>
           {data.map((dialog) => (
             <SidebarItem key={dialog.id} props={dialog} idHandler={idHandler} />

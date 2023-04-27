@@ -48,7 +48,7 @@ function PostForm({ chatId }: PostFormProps) {
         <input
           value={userMessage.message}
           onChange={(e) =>
-            setUserMessage({...userMessage, message: e.target.value})
+            setUserMessage({ ...userMessage, message: e.target.value })
           }
           placeholder='Type message'
           type='text'
@@ -56,9 +56,11 @@ function PostForm({ chatId }: PostFormProps) {
         />
         {/* <Input placeholder='Type message' type='text' /> */}
         <input id='upload-file' type='file' className='visually-hidden' />
-        <button onClick={submitHandler} className='post-form-button'>
-          <span className='visually-hidden'>Отправить</span>
-        </button>
+        <span className='form-button-wrapper'>
+          <button onClick={submitHandler} className='post-form-button'>
+            <span className='visually-hidden'>Отправить</span>
+          </button>
+        </span>
       </form>
     </div>
   );

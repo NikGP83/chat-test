@@ -152,6 +152,33 @@
         "you": true
       },
       "message": "могу же"
+    },
+    {
+      "id": "1682506309422",
+      "dialog": "e5ce7ef4-67ca-4538-add8-fefd46b06326",
+      "created_at": 1682506309422,
+      "user": {
+        "you": true
+      },
+      "message": "Есть программист"
+    },
+    {
+      "id": "1682574723359",
+      "dialog": "ff2a9f46-82c5-4bc9-b3f7-b0b1991a23d7",
+      "created_at": 1682574723359,
+      "user": {
+        "you": true
+      },
+      "message": "Как работает пластик"
+    },
+    {
+      "id": "1682594457348",
+      "dialog": "48df3f19-5862-4acb-b6d1-178ecfd1f837",
+      "created_at": 1682594457348,
+      "user": {
+        "you": true
+      },
+      "message": "Да да, могу!"
     }
   ],
   "dialog": [

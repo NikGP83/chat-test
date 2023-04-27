@@ -6,4 +6,7 @@
   color: #a19f9d;
   box-sizing: border-box;
   margin-left: 30px;
+  &:focus {
+    color: #000000;
+  }
 }

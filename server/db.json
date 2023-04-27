@@ -170,6 +170,15 @@
         "you": true
       },
       "message": "Как работает пластик"
+    },
+    {
+      "id": "1682594457348",
+      "dialog": "48df3f19-5862-4acb-b6d1-178ecfd1f837",
+      "created_at": 1682594457348,
+      "user": {
+        "you": true
+      },
+      "message": "Да да, могу!"
     }
   ],
   "dialog": [

@@ -16,8 +16,10 @@ function Message({ user, created_at, message }: ChatMessage) {
               <div className='message-avatar'>
                 <Avatar {...user} size='sm' />
               </div>
-              <span className='user-name'>{name}</span>
-              <span className='user-surname'>{surname}</span>
+              <div className='user-message-block'>
+                <span className='user-name'>{name}</span>
+                <span className='user-surname'>{surname}</span>
+              </div>
             </div>
           </>
         )}

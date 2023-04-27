@@ -29,7 +29,7 @@ function MessageDesk({ chatId }: MessageDeskProps) {
           {data.map((userMessage) => (
             <div
               key={userMessage.message}
-              className={`message-item ${
+              className={`message-item  ${
                 !userMessage.user.you && `incoming-message-position`
               }`}
             >

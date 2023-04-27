@@ -6,6 +6,7 @@ import { getTime } from '../../utils/utils';
 
 function Message({ user, created_at, message }: ChatMessage) {
   const { name, surname, you } = user;
+  console.log(you)
   return (
     <div className='message-wrapper'>
       <div>
@@ -20,8 +21,8 @@ function Message({ user, created_at, message }: ChatMessage) {
             </div>
           </>
         )}
-        <div className='message-content'>
-          <div className={`message-bubble ${you && `your-message`}`}>
+        <div className='message-content' >
+          <div className='message-bubble'>
             <p className='message-text'>{message}</p>
             <div className='message-time'>{getTime(created_at)}</div>
             {you && (

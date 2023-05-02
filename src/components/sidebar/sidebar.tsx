@@ -7,6 +7,7 @@ import MessageDesk from '../message-desk/message-desk';
 import Input from '../input/input';
 
 function Sidebar() {
+  const [search, setSearch] = useState('');
   const { data } = useGetSidebarDialogMsgDataQuery(appUrls.dialog, {
     pollingInterval: 10000,
   });
@@ -14,6 +15,10 @@ function Sidebar() {
   const idHandler = (id: string) => {
     setChatId(id);
   };
+
+  const searchName = () => {
+    return 
+  }
   if (typeof data === 'undefined') {
     return null;
   }
@@ -21,7 +26,7 @@ function Sidebar() {
     <>
       <div className='sidebar'>
         <div className='sidebar-search-block'>
-          <Input type='text' placeholder='search' />
+          <Input value={search} type='text' placeholder='search' onChange={(e) => setSearch(e.target.value)}/>
         </div>
         <div>
           {data.map((dialog) => (

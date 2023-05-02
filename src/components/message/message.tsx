@@ -13,7 +13,7 @@ function Message({ user, created_at, message }: ChatMessage) {
         {!you && (
           <>
             <div className='users-block'>
-              <div className='message-avatar'>
+              <div className='message-avatar-wrapper'>
                 <Avatar {...user} size='sm' />
               </div>
               <div className='user-message-block'>
@@ -26,7 +26,7 @@ function Message({ user, created_at, message }: ChatMessage) {
         <div className={`message-bubble ${!you && `message-partner-bubble`} `}>
           <span className='message-text'>
             {message}
-            <div className='messages-attributes'>
+            <div className={`messages-attributes ${!you && `without-check-icon`}`}>
               <div className='message-time'>{getTime(created_at)}</div>
               {you && (
                 <div className='message-readed'>

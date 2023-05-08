@@ -6,6 +6,7 @@ interface HeaderProps {
 }
 
 function Header({chatHeaderTitle}: HeaderProps) {
+
   return (
     <header className='chat-header'>
       <div className='chat-header-wrapper'>

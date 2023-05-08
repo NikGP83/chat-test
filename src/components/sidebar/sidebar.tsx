@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import SidebarItem from '../sidebar-item/sidebar-item';
 import './sidebar.scss';
 import { useGetSidebarDialogMsgDataQuery } from '../../api/chat/chat-services';
@@ -16,20 +16,35 @@ function Sidebar() {
     setChatId(id);
   };
 
-  const searchName = () => {
-    return 
-  }
-  if (typeof data === 'undefined') {
+
+  const filteredDialog = useMemo(() => {
+    if (search && typeof data !== 'undefined') {
+      return [...data].filter((el) =>
+        el.user.name.toLowerCase().includes(search.toLocaleLowerCase())
+      );
+    } else {
+      return data;
+    }
+
+  }, [search, data])
+  
+  if (typeof filteredDialog === 'undefined') {
     return null;
   }
+
   return (
     <>
       <div className='sidebar'>
         <div className='sidebar-search-block'>
-          <Input value={search} type='text' placeholder='search' onChange={(e) => setSearch(e.target.value)}/>
+          <Input
+            value={search}
+            type='text'
+            placeholder='search'
+            onChange={(e) => setSearch(e.target.value)}
+          />
         </div>
         <div>
-          {data.map((dialog) => (
+          {filteredDialog.map((dialog) => (
             <SidebarItem key={dialog.id} props={dialog} idHandler={idHandler} />
           ))}
         </div>

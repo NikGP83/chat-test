@@ -179,6 +179,15 @@
         "you": true
       },
       "message": "Да да, могу!"
+    },
+    {
+      "id": "1682840561066",
+      "dialog": "0dcbe44f-e27d-44fc-8e78-4e331c8f2fb8",
+      "created_at": 1682840561066,
+      "user": {
+        "you": true
+      },
+      "message": "Привет!"
     }
   ],
   "dialog": [

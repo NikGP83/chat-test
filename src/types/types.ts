@@ -7,11 +7,11 @@ export interface User {
 }
 
 export interface ChatMessage {
-  id: string;
   created_at: number;
-  user: User;
-  message: string;
+  id: string;
   is_new: boolean;
+  message: string;
+  user: User;
 }
 
 export interface PostFormMessage {

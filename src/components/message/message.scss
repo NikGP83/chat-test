@@ -5,12 +5,16 @@
   padding: 12px 8px;
   border-radius: 8px;
 }
-
-.message-partner-bubble{
+.message-avatar-wrapper {
+  position: absolute;
+  left: -33px;
+  top: 5px;
+}
+.message-partner-bubble {
   background-color: #f3f3f3;
-} 
+}
 .users-block {
-  display: flex;
+  position: relative;
 }
 
 .message-text {
@@ -35,12 +39,15 @@
   color: #201f1e;
 }
 
-
 .messages-attributes {
   display: flex;
   align-items: end;
   width: 50px;
   margin-left: 8px;
+}
+
+.without-check-icon {
+  justify-content: flex-end;
 }
 
 .message-readed {
